@@ -12,6 +12,10 @@ import {AboutComponent} from './tabs/about/about.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {UserInfoComponent} from './user-info/user-info.component';
 import {ArticleComponent} from './tabs/article/article.component';
+import {CompressImgComponent} from './compress-img/compress-img.component';
+import {CommonModule} from "@angular/common";
+import {FormsModule} from "@angular/forms";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
     declarations: [
@@ -23,11 +27,15 @@ import {ArticleComponent} from './tabs/article/article.component';
         UserComponent,
         AboutComponent,
         UserInfoComponent,
-        ArticleComponent
+        ArticleComponent,
+        CompressImgComponent
     ],
     imports: [
         BrowserAnimationsModule,
         BrowserModule,
+        CommonModule,
+        FormsModule,
+        HttpModule,
         AppRoutingModule
     ],
     providers: [],

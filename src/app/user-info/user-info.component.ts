@@ -7,23 +7,23 @@ import {Router} from "@angular/router";
     selector: 'app-user-info',
     templateUrl: './user-info.component.html',
     styleUrls: ['./user-info.component.less'],
-    animations:[zoomInOut,fadeIn],
-    host:{
-        '[@zoomInOut]':'',
+    animations: [zoomInOut, fadeIn],
+    host: {
+        '[@zoomInOut]': '',
     }
 })
 export class UserInfoComponent implements OnInit {
 
-    constructor(private _router:Router) {
+    constructor(private _router: Router) {
     }
 
     ngOnInit() {
     }
 
-    display:boolean = false;
+    display: boolean = false;
 
-    rightIconBack(){
-        this._router.navigate(['/!/index'],{queryParams:{a:1}})
+    rightIconBack() {
+        this._router.navigate(['/!/index'], {queryParams: {a: 1}})
     }
 
 }

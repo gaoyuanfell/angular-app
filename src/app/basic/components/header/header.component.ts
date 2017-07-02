@@ -6,10 +6,7 @@ import {Router} from "@angular/router";
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.less']
 })
-export class HeaderComponent implements OnInit, OnChanges {
-    ngOnChanges(changes: SimpleChanges): void {
-        console.info(changes);
-    }
+export class HeaderComponent implements OnInit {
 
     constructor(private _router: Router) {
     }
@@ -22,16 +19,16 @@ export class HeaderComponent implements OnInit, OnChanges {
     @Input() rightExtras = {};
     @Input() leftBack: any;
     @Input() leftExtras = {};
-    @Input() leftIcon:string;
+    @Input() leftIcon: string;
     @Output() leftIconBack = new EventEmitter<any>();
-    @Input() rightIcon:string;
+    @Input() rightIcon: string;
     @Output() rightIconBack = new EventEmitter<any>();
 
     goLeftBack() {
         if (this.leftBack === -1) {
             window.history.go(-1);
         } else {
-            this._router.navigate(this.leftBack,this.leftExtras)
+            this._router.navigate(this.leftBack, this.leftExtras)
         }
     }
 
@@ -39,15 +36,15 @@ export class HeaderComponent implements OnInit, OnChanges {
         if (this.rightBack === -1) {
             window.history.go(-1);
         } else {
-            this._router.navigate(this.rightBack,this.rightExtras)
+            this._router.navigate(this.rightBack, this.rightExtras)
         }
     }
 
-    goRightIcon(){
+    goRightIcon() {
         this.rightIconBack.emit();
     }
 
-    goLeftIcon(){
+    goLeftIcon() {
         this.leftIconBack.emit();
     }
 
