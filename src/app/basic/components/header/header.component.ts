@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
-import {NavigationExtras, Router} from "@angular/router";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-header',
