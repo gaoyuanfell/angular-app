@@ -1,8 +1,13 @@
-<app-header [title]="'用户详情'"></app-header>
+<app-header
+    [title]="'用户详情'"
+    [leftBack]="['/!/user']"
+    [leftExtras]="{queryParams:{a:1}}"
+    [rightIcon]="'&#xe600;'"
+    (rightIconBack)="rightIconBack()">
+</app-header>
 
 <div class="content">
     <div class="scroll-content m-b-0">
-        <a routerLink="/!/user">user</a>
         <h4 (click)="display = !display">滕王阁序3</h4>
         <pre [@fadeIn] *ngIf="display">
             豫章故郡， 洪都新府。

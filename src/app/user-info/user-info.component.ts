@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {zoomInOut} from "../basic/animations/zoom-in-out";
 import {fadeIn} from "../basic/animations/fade-in";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-user-info',
@@ -13,12 +14,16 @@ import {fadeIn} from "../basic/animations/fade-in";
 })
 export class UserInfoComponent implements OnInit {
 
-    constructor() {
+    constructor(private _router:Router) {
     }
 
     ngOnInit() {
     }
 
-    display:boolean = false
+    display:boolean = false;
+
+    rightIconBack(){
+        this._router.navigate(['/!/index'],{queryParams:{a:1}})
+    }
 
 }

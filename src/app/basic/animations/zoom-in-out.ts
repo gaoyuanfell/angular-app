@@ -17,7 +17,7 @@ export const zoomInOut = trigger('zoomInOut', [
             opacity: 0,
             transform: 'scale3d(.85, .85, .85)'
         }),
-        animate(180, style({
+        animate(150, style({
             opacity: 1,
             transform: 'scale3d(1, 1, 1)'
         }))
@@ -27,7 +27,7 @@ export const zoomInOut = trigger('zoomInOut', [
             opacity: 1,
             transform: 'scale3d(1, 1, 1)'
         }),
-        animate(180, style({
+        animate(150, style({
             opacity: 0,
             transform: 'scale3d(.85, .85, .85)'
         }))

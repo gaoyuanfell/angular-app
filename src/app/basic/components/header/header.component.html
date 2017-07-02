@@ -1,6 +1,7 @@
 <div class="bar-button">
     <div class="button-inner">
-
+        <i *ngIf="leftBack" class="icon" (click)="goLeftBack()">&#xe657;</i>
+        <i *ngIf="leftIcon" class="icon" [innerHTML]="leftIcon" (click)="goLeftIcon()"></i>
     </div>
 </div>
 <div class="title">
@@ -10,6 +11,9 @@
 </div>
 <div class="bar-button">
     <div class="button-inner">
-
+        <div class="button-inner">
+            <i *ngIf="rightBack" class="icon" (click)="goRightBack()">&#xe63a;</i>
+            <i *ngIf="rightIcon" class="icon" [innerHTML]="rightIcon" (click)="goRightIcon()"></i>
+        </div>
     </div>
 </div>
