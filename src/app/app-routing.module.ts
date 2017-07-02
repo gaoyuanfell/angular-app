@@ -27,6 +27,11 @@ const routes: Routes = [
             {
                 path: 'user',
                 component: UserComponent
+            },
+            {
+                path: '',
+                redirectTo: '/!/index',
+                pathMatch: 'full',
             }
         ]
     },
@@ -36,9 +41,9 @@ const routes: Routes = [
     },
     {
         path: '',
-        redirectTo: '/!',
+        redirectTo: '/!/index',
         pathMatch: 'full',
-    }
+    },
 ];
 
 @NgModule({
