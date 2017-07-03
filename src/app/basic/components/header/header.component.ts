@@ -20,8 +20,10 @@ export class HeaderComponent implements OnInit {
     @Input() leftBack: any;
     @Input() leftExtras = {};
     @Input() leftIcon: string;
+    @Input() leftText: string;
     @Output() leftIconBack = new EventEmitter<any>();
     @Input() rightIcon: string;
+    @Input() rightText: string;
     @Output() rightIconBack = new EventEmitter<any>();
 
     goLeftBack() {

@@ -68,3 +68,15 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  * Need to import at least one locale-data with intl.
  */
 // import 'intl/locale-data/jsonp/en';
+
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
+// import 'rxjs/add/operator/merge';
+// import 'rxjs/add/operator/reduce';
+// import 'rxjs/add/operator/zip';
+// import 'rxjs/add/operator/zipAll';
+// import 'rxjs/add/operator/observeOn';
+// import 'rxjs/add/operator/toPromise';
+// import 'rxjs/add/observable/forkJoin';
+

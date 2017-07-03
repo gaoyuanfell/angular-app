@@ -7,3 +7,46 @@
     height: 100%;
     z-index: 1;
 }
+
+article {
+    .list {
+        margin-bottom: 3px;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        .item {
+            margin-right: 3px;
+            display: block;
+            position: relative;
+            width: 100%;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 0 0;
+            -ms-flex: 1 0 0;
+            flex: 1 0 0;
+            background-color: #efefef;
+            &:last-child {
+                margin-right: 0;
+            }
+            .item-bottom {
+                padding-bottom: 100%;
+                img {
+                    height: 100%;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    width: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                }
+            }
+        }
+    }
+}

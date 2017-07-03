@@ -12,10 +12,15 @@ import {AboutComponent} from './tabs/about/about.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {UserInfoComponent} from './user-info/user-info.component';
 import {ArticleComponent} from './tabs/article/article.component';
-import {CompressImgComponent} from './compress-img/compress-img.component';
+import {CompressImgComponent} from './basic/components/compress-img/compress-img.component';
 import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
+import {GlobalService} from "../service/global-service";
+import {httpInterceptor} from "../providers/Interceptor";
+import {ApiService} from "../service/api-service";
+import { CreateStyleComponent } from './create-style/create-style.component';
+import { CreateDetailComponent } from './create-detail/create-detail.component';
 
 @NgModule({
     declarations: [
@@ -28,7 +33,9 @@ import {HttpModule} from "@angular/http";
         AboutComponent,
         UserInfoComponent,
         ArticleComponent,
-        CompressImgComponent
+        CompressImgComponent,
+        CreateStyleComponent,
+        CreateDetailComponent
     ],
     imports: [
         BrowserAnimationsModule,
@@ -38,7 +45,11 @@ import {HttpModule} from "@angular/http";
         HttpModule,
         AppRoutingModule
     ],
-    providers: [],
+    providers: [
+        httpInterceptor,
+        GlobalService,
+        ApiService,
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

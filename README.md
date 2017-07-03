@@ -1,3 +1,4 @@
+闲来无事，随便写写，觉得可以的来个start，目前只有前端页面，后期有时间会把后台功能也加上。
 # AngularApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.

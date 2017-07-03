@@ -1,14 +1,11 @@
 <app-header
-    [title]="'用户详情'"
-    [leftBack]="['/!/user']"
-    [leftExtras]="{queryParams:{a:1}}"
-    [rightIcon]="'&#xe6f5;'"
-    (rightIconBack)="file.click()">
+    [title]="'新帖子'"
+    [leftBack]="['/!/index']"
+    [rightText]="'下一步'">
 </app-header>
 
 <div class="content">
     <div class="scroll-content m-b-0">
-        <input type="file" #file style="display: none">
-        <app-compress-img [file]="file"></app-compress-img>
+        <app-compress-img [blobUrl]="blobUrl" [width]="width" [height]="height"></app-compress-img>
     </div>
 </div>

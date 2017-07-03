@@ -6,6 +6,8 @@ import {AboutComponent} from "./tabs/about/about.component";
 import {UserComponent} from "./tabs/user/user.component";
 import {UserInfoComponent} from "./user-info/user-info.component";
 import {ArticleComponent} from "./tabs/article/article.component";
+import {CreateStyleComponent} from "./create-style/create-style.component";
+import {CreateDetailComponent} from "./create-detail/create-detail.component";
 
 const routes: Routes = [
     {
@@ -14,7 +16,8 @@ const routes: Routes = [
         children: [
             {
                 path: 'index',
-                component: IndexComponent
+                component: IndexComponent,
+                data: {}
             },
             {
                 path: 'about',
@@ -38,6 +41,14 @@ const routes: Routes = [
     {
         path: 'user-info',
         component: UserInfoComponent
+    },
+    {
+        path: 'create-style',
+        component: CreateStyleComponent
+    },
+    {
+        path: 'create-detail',
+        component: CreateDetailComponent
     },
     {
         path: '',
