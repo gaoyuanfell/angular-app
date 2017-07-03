@@ -2,25 +2,26 @@ import {Injectable, ViewContainerRef} from "@angular/core";
 @Injectable()
 export class GlobalService {
     constructor() {
-        for(let k in  window.sessionStorage){
-            this.session.set(k,this.getSession(k));
+        for (let k in  window.sessionStorage) {
+            this.session.set(k, this.getSession(k));
         }
     }
 
     /*
-    * 根路由的 ViewContainerRef
-    * */
+     * 根路由的 ViewContainerRef
+     * */
     private _rootViewContainerRef: ViewContainerRef;
-    set rootViewContainerRef(view:ViewContainerRef){
+    set rootViewContainerRef(view: ViewContainerRef) {
         view && (this._rootViewContainerRef = view);
     }
-    get rootViewContainerRef(){
+
+    get rootViewContainerRef() {
         return this._rootViewContainerRef
     }
 
     /*
-    * 缓存信息
-    * */
+     * 缓存信息
+     * */
     private session = new Map();
 
     setSession(key, value) {
@@ -44,5 +45,19 @@ export class GlobalService {
     deleteSession(key) {
         window.sessionStorage.removeItem(key);
         this.session.delete(key);
+    }
+
+    private cache = new Map();
+
+    setCache(key, value) {
+        this.cache.set(key, value);
+    }
+
+    getCache(key) {
+        return this.cache.get(key);
+    }
+
+    deleteCache(key) {
+        this.cache.delete(key);
     }
 }

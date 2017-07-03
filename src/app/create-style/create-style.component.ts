@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {zoomInOut} from "../basic/animations/zoom-in-out";
 import {GlobalService} from "../../service/global-service";
 import {Router} from "@angular/router";
+import compressImg from "../../compress-img";
 
 @Component({
     selector: 'app-create-style',
@@ -14,7 +15,12 @@ import {Router} from "@angular/router";
 })
 export class CreateStyleComponent implements OnInit {
 
-    constructor(private _router: Router,private _globalService:GlobalService) {
+    constructor(private _router: Router, private _globalService: GlobalService) {
+        this.cacheFile = this._globalService.getCache('file');
+        if (!this.cacheFile) {
+            this._router.navigate(['/!/index']);
+            return;
+        }
         let file = _globalService.getSession('file');
         this.blobUrl = file.blobUrl;
         this.width = file.width;
@@ -25,11 +31,25 @@ export class CreateStyleComponent implements OnInit {
     ngOnInit() {
     }
 
+    cacheFile;
     blobUrl;
     width;
     height;
+    config:any
 
     rightIconBack() {
-        this._router.navigate(['/create-detail'])
+        compressImg(this.cacheFile,{
+            w:this.config.width,
+            h:this.config.height,
+        }).then((res) => {
+            console.info(res);
+            console.info(URL.createObjectURL(res));
+        })
+        // this._router.navigate(['/create-detail'])
+    }
+
+    imgChange(e:any){
+        console.info(e)
+        this.config = e
     }
 }

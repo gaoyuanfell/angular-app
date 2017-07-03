@@ -1,6 +1,6 @@
-<div class="img-watch-box" >
+<div class="img-watch-box">
     <div class="img-watch" #imgWatch></div>
-    <button class="enlarge" (click)="enlarge()">
+    <button class="enlarge" (click)="enlarge()" *ngIf="width != height">
         <i class="icon">&#xe633;</i>
     </button>
     <button class="rotate" (click)="rotate()">

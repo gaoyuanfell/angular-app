@@ -14,23 +14,20 @@ import {GlobalService} from "../../service/global-service";
 })
 export class UserInfoComponent implements OnInit {
 
-    constructor(private _router: Router,private _globalService:GlobalService) {
+    constructor(private _router: Router, private _globalService: GlobalService) {
         let file = _globalService.getSession('file')
         this.blobUrl = file.blobUrl;
         this.width = file.width;
         this.height = file.height;
         console.info(file)
     }
+
     blobUrl;
     width;
     height;
+
     ngOnInit() {
     }
 
     display: boolean = false;
-
-    rightIconBack() {
-        this._router.navigate(['/!/index'], {queryParams: {a: 1}})
-    }
-
 }

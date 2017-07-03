@@ -7,7 +7,8 @@ import {GlobalService} from "../service/global-service";
     styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-    _viewContainerRef:ViewContainerRef;
+    _viewContainerRef: ViewContainerRef;
+
     constructor(private _globalService: GlobalService, private viewContainerRef: ViewContainerRef) {
         this._viewContainerRef = this._globalService.rootViewContainerRef = this.viewContainerRef
     }

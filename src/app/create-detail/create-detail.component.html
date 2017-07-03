@@ -1,11 +1,20 @@
 <app-header
     [title]="'新帖子'"
     [leftBack]="['/create-style']"
-    [rightText]="'分享'">
+    [rightText]="'分享'" (rightIconBack)="share()">
 </app-header>
 
 <div class="content">
     <div class="scroll-content m-b-0">
-
+        <section class="context-detail flex">
+            <span class="img-user">
+                <img src="assets/img/touxiang.jpg" alt="">
+            </span>
+            <div class="context flex">
+                <textarea autocomplete="off" placeholder="添加照片说明…"></textarea>
+            </div>
+            <img class="cache-img" #cacheImg>
+        </section>
+        <img #testImg>
     </div>
 </div>

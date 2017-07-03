@@ -7,6 +7,6 @@
 
 <div class="content">
     <div class="scroll-content m-b-0">
-        <app-compress-img [blobUrl]="blobUrl" [width]="width" [height]="height"></app-compress-img>
+        <app-compress-img [blobUrl]="blobUrl" [width]="width" [height]="height" (change)="imgChange($event)"></app-compress-img>
     </div>
 </div>

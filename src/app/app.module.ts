@@ -19,8 +19,8 @@ import {HttpModule} from "@angular/http";
 import {GlobalService} from "../service/global-service";
 import {httpInterceptor} from "../providers/Interceptor";
 import {ApiService} from "../service/api-service";
-import { CreateStyleComponent } from './create-style/create-style.component';
-import { CreateDetailComponent } from './create-detail/create-detail.component';
+import {CreateStyleComponent} from './create-style/create-style.component';
+import {CreateDetailComponent} from './create-detail/create-detail.component';
 
 @NgModule({
     declarations: [

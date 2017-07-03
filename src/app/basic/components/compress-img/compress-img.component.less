@@ -1,4 +1,4 @@
-:host{
+:host {
     left: 0;
     padding-bottom: 45px;
     position: absolute;
@@ -6,7 +6,7 @@
     top: 0;
     touch-action: none;
     display: block;
-    .img-watch-box{
+    .img-watch-box {
         background-color: #fff;
         bottom: 0;
         display: block;
@@ -17,33 +17,37 @@
         top: 0;
         padding-bottom: 100%;
         border-bottom: 1px solid #dbdbdb;
-        .img-watch{
+        .img-watch {
             width: 100%;
             height: 100%;
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            will-change: height,left,top,width,transform;
+            will-change: height, left, top, width, transform;
             position: absolute;
             transition: all 0.2s ease;
             transform: rotate(0deg);
         }
-        button{
+        button {
             background-color: transparent;
             border: none;
             bottom: 16px;
             outline: none;
             position: absolute;
             padding: 0;
-            .icon{
-                font-size: 40px;
-                opacity: 0.6;
+            .icon {
+                font-size: 35px;
+                display: block;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background-color: #fff;
             }
         }
-        button.enlarge{
+        button.enlarge {
             left: 16px;
         }
-        button.rotate{
+        button.rotate {
             right: 16px;
         }
     }

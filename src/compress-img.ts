@@ -1,7 +1,12 @@
 //图片压缩
 async function compressImg(blob, config?: any) {
     config = config || {
-            wh: 200,
+            w: 1080,
+            h: 1080,
+            sw: 0,
+            sh: 0,
+            x:0,
+            y:0,
             quality: 1,
             type: blob.type || 'image/jpeg'
         }
@@ -33,14 +38,14 @@ function canvasToImg($canvas, result, config) {
         img.onload = function () {
             let width = img.width;
             let height = img.height;
-            $canvas.width = config.wh;
-            $canvas.height = config.wh;
+            $canvas.width = config.w;
+            $canvas.height = config.h;
             if (width > height) {
-                let w = width / (height / config.wh);
-                canvas.drawImage(img, 0, 0, width, height, -(w - config.wh) / 2, 0, w, config.wh);
+                let w = width / (height / config.h);
+                canvas.drawImage(img, 0, 0, width, height, config.x || -(w - config.w) / 2, config.y || 0, w, config.h);
             } else {
-                let h = height / (width / config.wh);
-                canvas.drawImage(img, 0, 0, width, height, 0, -(h - config.wh) / 2, config.wh, h);
+                let h = height / (width / config.w);
+                canvas.drawImage(img, 0, 0, width, height, config.x || 0, config.y || -(h - config.h) / 2, config.w, h);
             }
             let bold = dataURLtoBlob($canvas.toDataURL(config.type, config.quality));
             resolve && resolve(bold);
