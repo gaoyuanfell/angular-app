@@ -4,7 +4,7 @@
     "license": "MIT",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve -p 4200",
+        "start": "ng serve -p 4200 --host 192.168.100.170",
         "build": "ng build --target -prod",
         "build:github": "ng build -prod -d https://gaoyuanfell.github.io/angular-app/ -bh https://gaoyuanfell.github.io/angular-app/",
         "test": "ng test",
