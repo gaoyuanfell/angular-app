@@ -1,11 +1,61 @@
 <app-header
-    [title]="'新帖子'"
-    [leftBack]="['/!/index']"
-    [rightText]="'下一步'">
+    [title]="'gaoyuanfell'"
+    [leftBack]="['/!/user']">
 </app-header>
 
 <div class="content">
     <div class="scroll-content m-b-0">
-        <app-compress-img [blobUrl]="blobUrl" [width]="width" [height]="height"></app-compress-img>
+        <article>
+            <div class="user-info flex">
+                <button class="user-img">
+                    <img src="assets/img/touxiang.jpg">
+                </button>
+                <h1 class="user-name">gaoyuanfell</h1>
+            </div>
+            <form novalidate>
+                <div class="form-group">
+                    <label class="form-label">姓名</label>
+                    <input type="text" class="form-control" value="释迦摩尼">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">帐号</label>
+                    <input type="text" class="form-control" value="gaoyuanfell">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">网站</label>
+                    <input type="text" class="form-control" value="">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">个人简介</label>
+                    <textarea class="form-control"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">邮箱</label>
+                    <input type="email" class="form-control" value="gaoyuanfell@sina.com">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">电话号码</label>
+                    <input type="number" class="form-control" value="释迦摩尼">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">性别</label>
+                    <div class="form-control-radio">
+                        <input type="radio" value="0">
+                        <input type="radio" value="1">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="提 交">
+                </div>
+
+            </form>
+        </article>
     </div>
 </div>
