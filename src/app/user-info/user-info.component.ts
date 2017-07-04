@@ -19,7 +19,6 @@ export class UserInfoComponent implements OnInit {
         this.blobUrl = file.blobUrl;
         this.width = file.width;
         this.height = file.height;
-        console.info(file)
     }
 
     blobUrl;

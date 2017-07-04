@@ -16,6 +16,7 @@ export class IndexComponent implements OnInit {
     }
 
     ngOnInit() {
+
     }
 
     imgs: string[] = ['assets/img/1.jpg', 'assets/img/5.jpg', 'assets/img/6.jpg', 'assets/img/7.jpg']
