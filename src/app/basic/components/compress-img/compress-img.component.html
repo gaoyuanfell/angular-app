@@ -1,5 +1,11 @@
 <div class="img-watch-box">
     <div class="img-watch" #imgWatch></div>
+    <div class="img-grid" *ngIf="isEnlarge" [@fadeIn]>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
     <button class="enlarge" (click)="enlarge()" *ngIf="width != height">
         <span class="ctrl-img ctrl-enlarge"></span>
     </button>

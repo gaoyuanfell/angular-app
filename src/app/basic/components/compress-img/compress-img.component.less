@@ -28,6 +28,38 @@
             transition: all 0.2s ease;
             transform: rotate(0deg);
         }
+        .img-grid{
+            height: 100%;
+            pointer-events: none;
+            .item{
+                background-color: rgba(255,255,255,.3);
+                position: absolute;
+            }
+            .item:nth-child(1){
+                left: 33%;
+                top: 0;
+                width: 1px;
+                height: 100%;
+            }
+            .item:nth-child(2){
+                right: 33%;
+                top: 0;
+                width: 1px;
+                height: 100%;
+            }
+            .item:nth-child(3){
+                top: 33%;
+                left: 0;
+                height: 1px;
+                width: 100%;
+            }
+            .item:nth-child(4){
+                bottom: 33%;
+                left: 0;
+                height: 1px;
+                width: 100%;
+            }
+        }
         button {
             background-color: transparent;
             border: none;

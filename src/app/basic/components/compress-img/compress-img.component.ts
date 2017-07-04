@@ -1,15 +1,23 @@
 import {Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, Renderer2, SimpleChanges, ViewChild} from '@angular/core';
+import {fadeIn} from "../../animations/fade-in";
 
 @Component({
     selector: 'app-compress-img',
     templateUrl: './compress-img.component.html',
-    styleUrls: ['./compress-img.component.less']
+    styleUrls: ['./compress-img.component.less'],
+    animations:[fadeIn]
 })
 export class CompressImgComponent implements OnInit {
     constructor() {
     }
 
-    private isEnlarge: boolean = false;
+    private _isEnlarge: boolean = false;
+    set isEnlarge(val){
+        this._isEnlarge = val;
+    }
+    get isEnlarge(){
+        return this._isEnlarge;
+    }
     private isRotate: 0 | 1 | 2 | 3 = 0;
 
     @ViewChild('imgWatch') imgWatch: ElementRef;
