@@ -8,5 +8,4 @@ if [ $1 ]
 fi
 git commit -am 'gh'
 git subtree push --prefix dist yuan gh-pages
-git push yuan master
 echo "Success";
