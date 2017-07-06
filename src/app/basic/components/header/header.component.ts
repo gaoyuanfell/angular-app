@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
     ngOnInit() {
     }
 
-    @Input() title: string = '标题';
+    @Input() title: string;
     @Input() rightBack: any;
     @Input() rightExtras = {};
     @Input() leftBack: any;

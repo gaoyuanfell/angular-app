@@ -8,4 +8,6 @@ if [ $1 ]
 fi
 git commit -am 'gh'
 git subtree push --prefix dist yuan gh-pages
+git pull yuan master
+git push yuan master
 echo "Success";
