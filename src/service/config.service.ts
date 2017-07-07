@@ -7,24 +7,24 @@ export class ConfigService {
     constructor(private _http: Http) {
     }
 
-    configForm() {
+    static configForm() {
         let h = new Headers();
         h.append('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
         return h;
     }
 
-    configJson() {
+    static configJson() {
         let h = new Headers();
         h.append('Content-Type', 'application/json;charset=UTF-8');
         return h;
     }
 
     postForm(url, body = {}, config = {}) {
-        return this._http.post(url, qs.stringify(body), {headers: this.configForm(), ...config})
+        return this._http.post(url, qs.stringify(body), {headers: ConfigService.configForm(), ...config})
     }
 
     postJson(url, body = {}, config = {}) {
-        return this._http.post(url, body, {headers: this.configJson(), ...config})
+        return this._http.post(url, body, {headers: ConfigService.configJson(), ...config})
     }
 
     get(url, body = {}, config = {}) {
