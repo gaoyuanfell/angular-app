@@ -1,13 +1,14 @@
 <app-header>
-<div class="input-group-search">
-    <div class="group-search-addon">
-        <i class="icon">&#xe61d;</i>
-        <i class="icon">&#xe636;</i>
+    <div class="input-group-search flex">
+        <div class="group-search-addon">
+            <i class="icon" *ngIf="!isSearch">&#xe61d;</i>
+            <i class="icon" *ngIf="isSearch" (click)="isSearch = false">&#xe636;</i>
+        </div>
+        <input class="form-control-search" (focus)="isSearch = true" #searchRef (input)="search(searchRef.value)"
+               type="text">
     </div>
-    <input class="form-control-search" type="search">
-</div>
 </app-header>
-<div class="content-tabs">
+<div class="content-tabs" *ngIf="!isSearch" [@fadeIn]>
     <div class="scroll-content">
         <article>
             <div class="list">
@@ -62,5 +63,19 @@
                 </div>
             </div>
         </article>
+    </div>
+</div>
+
+<div class="content-tabs" *ngIf="isSearch" [@fadeIn]>
+    <div class="scroll-content">
+        <div class="user-item" [routerLink]="['/!/user','gaoyuanfell']" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]">
+            <div class="user-item-row flex">
+                <img class="user-img" src="assets/img/touxiang.jpg" alt="">
+                <div class="user-name">
+                    <p class="name-title">gaoyuanfell</p>
+                    <span class="name-introduce">91.02.18 박기량 11.11.05 몽몽🐶</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

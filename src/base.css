@@ -1,11 +1,12 @@
 @font-face {
     font-family: 'moka';  /* project id 295564 */
-    src: url('https://at.alicdn.com/t/font_15122h2c36wxko6r.eot');
-    src: url('https://at.alicdn.com/t/font_15122h2c36wxko6r.eot?#iefix') format('embedded-opentype'),
-    url('https://at.alicdn.com/t/font_15122h2c36wxko6r.woff') format('woff'),
-    url('https://at.alicdn.com/t/font_15122h2c36wxko6r.ttf') format('truetype'),
-    url('https://at.alicdn.com/t/font_15122h2c36wxko6r.svg#moka') format('svg');
+    src: url('https://at.alicdn.com/t/font_rydla8uf1u9mgqfr.eot');
+    src: url('https://at.alicdn.com/t/font_rydla8uf1u9mgqfr.eot?#iefix') format('embedded-opentype'),
+    url('https://at.alicdn.com/t/font_rydla8uf1u9mgqfr.woff') format('woff'),
+    url('https://at.alicdn.com/t/font_rydla8uf1u9mgqfr.ttf') format('truetype'),
+    url('https://at.alicdn.com/t/font_rydla8uf1u9mgqfr.svg#moka') format('svg');
 }
+
 .icon {
     font-family: "moka" !important;
     font-size: 16px;

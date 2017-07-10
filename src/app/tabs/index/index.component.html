@@ -1,5 +1,11 @@
+<input type="file" #file style="display: none" (change)="fileChange(file)" accept="image/*" capture="camera">
+<app-header
+    [title]="'主页'"
+    [leftIcon]="'&#xe751;'"
+    (leftIconBack)="file.click()">
+</app-header>
 <div class="content-tabs">
-    <div class="scroll-content m-t-0">
+    <div class="scroll-content">
         <article class="flex" *ngFor="let m of imgs">
             <header class="flex">
                 <a class="touxiang">
