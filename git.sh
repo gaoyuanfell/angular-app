@@ -7,6 +7,7 @@ if [ $1 ]
     git commit -am $1
 fi
 git commit -am 'gh'
+git subtree pull --prefix dist yuan gh-pages
 git subtree push --prefix dist yuan gh-pages
 git pull yuan master
 git push yuan master
