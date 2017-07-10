@@ -31,19 +31,6 @@ export class TabbarComponent implements OnInit {
             this._globalService.setCache('file-blob', blob);
             this._router.navigate(['/create-style'])
         } )
-
-        // let url = URL.createObjectURL(blob);
-        // let img = new Image();
-        // img.src = url;
-        // img.onload = () => {
-        //     this._globalService.setCache('file-url', {
-        //         blobUrl: url,
-        //         height: img.height,
-        //         width: img.width
-        //     });
-        //     this._globalService.setCache('file-blob', blob);
-        //     this._router.navigate(['/create-style'])
-        // }
     }
 
 }

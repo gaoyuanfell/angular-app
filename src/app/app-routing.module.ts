@@ -32,6 +32,10 @@ const routes: Routes = [
                 component: UserComponent
             },
             {
+                path: 'user/:id',
+                component: UserComponent
+            },
+            {
                 path: '',
                 redirectTo: '/!/index',
                 pathMatch: 'full',

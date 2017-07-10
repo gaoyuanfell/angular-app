@@ -1,9 +1,14 @@
 import {Component, OnInit} from '@angular/core';
+import {fadeIn} from "../../basic/animations/fade-in";
 
 @Component({
     selector: 'app-article',
     templateUrl: './article.component.html',
-    styleUrls: ['./article.component.less']
+    styleUrls: ['./article.component.less'],
+    animations: [fadeIn],
+    host: {
+        '[@fadeIn]': ''
+    }
 })
 export class ArticleComponent implements OnInit {
 
@@ -13,4 +18,9 @@ export class ArticleComponent implements OnInit {
     ngOnInit() {
     }
 
+    isSearch:boolean = false;
+
+    search(e:KeyboardEvent){
+        console.info(e);
+    }
 }

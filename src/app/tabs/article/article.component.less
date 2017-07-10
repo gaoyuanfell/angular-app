@@ -50,3 +50,71 @@ article {
         }
     }
 }
+
+.input-group-search{
+    height: 28px;
+    flex-grow: 1;
+    padding: 0 16px;
+    align-items: center;
+    color: #262626;
+    justify-content: center;
+    min-width: 0;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-direction: row;
+    .group-search-addon{
+        height: 28px;
+        line-height: 28px;
+        .icon{
+            font-size: 20px;
+            padding-right: 5px;
+        }
+    }
+    .form-control-search{
+        border: solid 1px #dbdbdb;
+        border-radius: 3px;
+        color: #262626;
+        font-size: 14px;
+        outline: none;
+        padding: 3px 10px 3px 10px;
+        flex-grow: 1;
+    }
+}
+
+//serach
+.user-item{
+    padding: 16px;
+    border-bottom: solid 1px #efefef;
+    &:last-child{
+        border-bottom:none
+    }
+    .user-item-row{
+        flex-direction: row;
+    }
+    .user-img{
+        height: 48px;
+        width: 48px;
+        margin: 0 16px 0 0;
+        border: solid 1px #efefef;
+        border-radius: 30px;
+        display: block;
+        flex: 0 0 auto;
+    }
+    .name-title{
+        flex-direction: row;
+        color: #262626;
+        font-size: 14px;
+        text-align: left;
+    }
+    .name-introduce{
+        font-weight: 300;
+        line-height: 22px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #999;
+        font-size: 14px;
+        text-align: left;
+    }
+}
